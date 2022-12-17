@@ -1,0 +1,46 @@
+
+.popup-alert {
+    position: absolute;
+    background-color: #fff;
+    width: 500px;
+    height: 250px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.header-popup {
+    background-color: #6A227C;
+}
+
+.header-popup h3 {
+    margin: 0;
+    color: #fff;
+    padding: 10px;
+    text-align: start;
+}
+
+.popup-alert p {
+    text-align: start;
+    padding: 10px;
+}
+
+.popup-alert button {
+    display: block;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    cursor: pointer;
+}
+
+.bg-app {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    background-color: #000;
+    top: 0;
+    left: 0;
+}

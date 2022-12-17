@@ -1,0 +1,34 @@
+.item-input {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 12px 0;
+    width: 100%;
+}
+
+.item-input label {
+    font-family: system-ui;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 0px;
+}
+
+.item-input input {
+    width: 100%;
+    height: 27px;
+    margin: 10px 0;
+    border: 1px solid gray;
+    padding-left: 9px;
+}
+
+form {
+    width: 100%;
+}
+
+button {
+    background-color: #6A227C;
+    color: #fff;
+    font-size: 16px;
+    padding: 7px 15px;
+    display: block;
+}

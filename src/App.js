@@ -1,23 +1,32 @@
-import logo from './logo.svg';
+import React, {useState} from 'react'
+
+import Card from './components/card/Card';
+import Forms from './components/Forms/Forms';
+import ShowUser from './components/ShowUser/ShowUser';
+
 import './App.css';
 
 function App() {
+
+  const [dataForm, setDataForm] = useState([])
+
+  const handlerForm = (uName, uAge) => {
+    setDataForm((prevState)=>{
+      return [...prevState, {name: uName, age: uAge}]
+    })
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App content-bg">
+      <Card>
+        <Forms onSaveDataForm={handlerForm} />
+      </Card>
+      {
+        dataForm.lenght > 0 ? console.log(dataForm) : null
+      }
+      <Card>
+        <ShowUser users={dataForm} />
+      </Card>
     </div>
   );
 }
